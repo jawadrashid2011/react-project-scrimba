@@ -433,13 +433,14 @@ var _client2 = _interopRequireDefault(_client);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var navbar = _react2.default.createElement(
-    "nav",
+var page = _react2.default.createElement(
+    "div",
     null,
+    _react2.default.createElement("img", { src: "./react-logo.png", width: "40px" }),
     _react2.default.createElement(
         "h1",
         null,
-        "Bob's Bistro"
+        "Fun facts about React"
     ),
     _react2.default.createElement(
         "ul",
@@ -447,23 +448,33 @@ var navbar = _react2.default.createElement(
         _react2.default.createElement(
             "li",
             null,
-            "Menu"
+            "Was first released in 2013"
         ),
         _react2.default.createElement(
             "li",
             null,
-            "About"
+            "Was originally created by Jordan Walke"
         ),
         _react2.default.createElement(
             "li",
             null,
-            "Contact"
+            "Has well over 100K stars on GitHub"
+        ),
+        _react2.default.createElement(
+            "li",
+            null,
+            "Is maintained by Facebook"
+        ),
+        _react2.default.createElement(
+            "li",
+            null,
+            "Powers thousands of enterprise apps, including mobile apps"
         )
     )
 );
 
 var root = _client2.default.createRoot(document.getElementById("root"));
-root.render(navbar);
+root.render(page);
 
 // ReactDOM.render(navbar, document.getElementById("root"))
 // ReactDOM.createRoot(document.getElementById("root")).render(navbar)

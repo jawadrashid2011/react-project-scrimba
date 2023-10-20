@@ -384,7 +384,39 @@ module.exports = g;
 
 
 /***/ }),
-/* 5 */,
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+var m = __webpack_require__(9);
+if (process.env.NODE_ENV === 'production') {
+  exports.createRoot = m.createRoot;
+  exports.hydrateRoot = m.hydrateRoot;
+} else {
+  var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+  exports.createRoot = function(c, o) {
+    i.usingClientEntryPoint = true;
+    try {
+      return m.createRoot(c, o);
+    } finally {
+      i.usingClientEntryPoint = false;
+    }
+  };
+  exports.hydrateRoot = function(c, h, o) {
+    i.usingClientEntryPoint = true;
+    try {
+      return m.hydrateRoot(c, h, o);
+    } finally {
+      i.usingClientEntryPoint = false;
+    }
+  };
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -395,92 +427,35 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(9);
+var _client = __webpack_require__(5);
 
-var _reactDom2 = _interopRequireDefault(_reactDom);
+var _client2 = _interopRequireDefault(_client);
+
+var _Header = __webpack_require__(16);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _MainContent = __webpack_require__(18);
+
+var _MainContent2 = _interopRequireDefault(_MainContent);
+
+var _Footer = __webpack_require__(17);
+
+var _Footer2 = _interopRequireDefault(_Footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Header() {
-    return _react2.default.createElement(
-        "header",
-        null,
-        _react2.default.createElement(
-            "nav",
-            { className: "nav" },
-            _react2.default.createElement("img", { src: "./react-logo.png", className: "nav-logo" }),
-            _react2.default.createElement(
-                "ul",
-                { className: "nav-items" },
-                _react2.default.createElement(
-                    "li",
-                    null,
-                    "Pricing"
-                ),
-                _react2.default.createElement(
-                    "li",
-                    null,
-                    "About"
-                ),
-                _react2.default.createElement(
-                    "li",
-                    null,
-                    "Contact"
-                )
-            )
-        )
-    );
-}
-
-function Footer() {
-    return _react2.default.createElement(
-        "footer",
-        null,
-        _react2.default.createElement(
-            "small",
-            null,
-            "\xA9 2021 Ziroll development. All rights reserved."
-        )
-    );
-}
-
-function MainContent() {
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "h1",
-            null,
-            "Reasons I'm excited to learn React"
-        ),
-        _react2.default.createElement(
-            "ol",
-            null,
-            _react2.default.createElement(
-                "li",
-                null,
-                "It's a popular library, so I'll be able to fit in with the cool kids!"
-            ),
-            _react2.default.createElement(
-                "li",
-                null,
-                "I'm more likely to get a job as a developer if I know React"
-            )
-        )
-    );
-}
 
 function Page() {
     return _react2.default.createElement(
         "div",
         null,
-        _react2.default.createElement(Header, null),
-        _react2.default.createElement(MainContent, null),
-        _react2.default.createElement(Footer, null)
+        _react2.default.createElement(_Header2.default, null),
+        _react2.default.createElement(_MainContent2.default, null),
+        _react2.default.createElement(_Footer2.default, null)
     );
 }
 
-var root = _reactDom2.default.createRoot(document.getElementById("root"));
+var root = _client2.default.createRoot(document.getElementById("root"));
 root.render(_react2.default.createElement(Page, null));
 
 // ReactDOM.render(navbar, document.getElementById("root"))
@@ -34407,6 +34382,129 @@ module.exports = function(module) {
 	return module;
 };
 
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = Header;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Header() {
+    return _react2.default.createElement(
+        "header",
+        null,
+        _react2.default.createElement(
+            "nav",
+            { className: "nav" },
+            _react2.default.createElement("img", { src: "./react-logo.png", className: "nav-logo" }),
+            _react2.default.createElement(
+                "ul",
+                { className: "nav-items" },
+                _react2.default.createElement(
+                    "li",
+                    null,
+                    "Pricing"
+                ),
+                _react2.default.createElement(
+                    "li",
+                    null,
+                    "About"
+                ),
+                _react2.default.createElement(
+                    "li",
+                    null,
+                    "Contact"
+                )
+            )
+        )
+    );
+}
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = Footer;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Footer() {
+    return _react2.default.createElement(
+        'footer',
+        null,
+        _react2.default.createElement(
+            'small',
+            null,
+            '\xA9 2021 Ziroll development. All rights reserved.'
+        )
+    );
+}
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = MainContent;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function MainContent() {
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+            'h1',
+            null,
+            'Reasons I\'m excited to learn React'
+        ),
+        _react2.default.createElement(
+            'ol',
+            null,
+            _react2.default.createElement(
+                'li',
+                null,
+                'It\'s a popular library, so I\'ll be able to fit in with the cool kids!'
+            ),
+            _react2.default.createElement(
+                'li',
+                null,
+                'I\'m more likely to get a job as a developer if I know React'
+            )
+        )
+    );
+}
 
 /***/ })
 /******/ ]);

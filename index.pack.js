@@ -434,14 +434,14 @@ var _client = __webpack_require__(8);
 
 var _client2 = _interopRequireDefault(_client);
 
+var _App = __webpack_require__(19);
+
+var _App2 = _interopRequireDefault(_App);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Page() {
-    return _react2.default.createElement("div", null);
-}
-
 var root = _client2.default.createRoot(document.getElementById("root"));
-root.render(_react2.default.createElement(Page, null));
+root.render(_react2.default.createElement(_App2.default, null));
 
 // ReactDOM.render(navbar, document.getElementById("root"))
 // ReactDOM.createRoot(document.getElementById("root")).render(navbar)
@@ -34367,6 +34367,103 @@ module.exports = function(module) {
 	return module;
 };
 
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = App;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Navbar = __webpack_require__(21);
+
+var _Navbar2 = _interopRequireDefault(_Navbar);
+
+var _Main = __webpack_require__(20);
+
+var _Main2 = _interopRequireDefault(_Main);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function App() {
+    return _react2.default.createElement(
+        'div',
+        { 'class': 'container' },
+        _react2.default.createElement(_Navbar2.default, null),
+        _react2.default.createElement(_Main2.default, null)
+    );
+}
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = Main;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Main() {
+    return _react2.default.createElement(
+        'h1',
+        null,
+        'Main content goes here'
+    );
+}
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = Navbar;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Navbar() {
+    return _react2.default.createElement(
+        'nav',
+        null,
+        _react2.default.createElement('img', { src: '../images/reactjs-icon.png', className: 'nav--icon' }),
+        _react2.default.createElement(
+            'h3',
+            { className: 'nav--logo_text' },
+            'ReactFacts'
+        ),
+        _react2.default.createElement(
+            'h4',
+            { className: 'nav--title' },
+            'React Course - Project 1'
+        )
+    );
+}
 
 /***/ })
 /******/ ]);

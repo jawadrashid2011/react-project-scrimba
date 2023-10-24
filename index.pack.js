@@ -399,13 +399,17 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Navbar = __webpack_require__(17);
+
+var _Navbar2 = _interopRequireDefault(_Navbar);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
     return _react2.default.createElement(
-        'h1',
+        'div',
         null,
-        'App Component'
+        _react2.default.createElement(_Navbar2.default, null)
     );
 }
 
@@ -34390,6 +34394,32 @@ module.exports = function(module) {
 	return module;
 };
 
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = Navbar;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Navbar() {
+    return _react2.default.createElement(
+        "nav",
+        null,
+        _react2.default.createElement("img", { src: "../images/airbnb-logo.png", className: "nav--logo" })
+    );
+}
 
 /***/ })
 /******/ ]);

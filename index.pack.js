@@ -416,10 +416,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function App() {
     // <Hero />
     return _react2.default.createElement(
-        'div',
+        "div",
         null,
         _react2.default.createElement(_Navbar2.default, null),
-        _react2.default.createElement(_Card2.default, null)
+        _react2.default.createElement(_Card2.default, {
+            img: "katie-zaferes.png",
+            rating: "5.0",
+            reviewCount: 6,
+            country: "USA",
+            title: "Life Lessons with Katie Zaferes",
+            price: 136
+        })
     );
 }
 
@@ -464,7 +471,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.default = Card;
 
@@ -474,60 +481,50 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Card() {
-  return _react2.default.createElement(
-    "section",
-    null,
-    _react2.default.createElement(
-      "div",
-      { className: "card" },
-      _react2.default.createElement("img", { src: "../images/katie-zaferes.png", className: "card--image" }),
-      _react2.default.createElement(
+function Card(props) {
+    return _react2.default.createElement(
         "div",
-        { className: "card--top-line" },
+        { className: "card" },
+        _react2.default.createElement("img", { src: "../images/" + props.img, className: "card--image" }),
         _react2.default.createElement(
-          "div",
-          { className: "card--stats" },
-          _react2.default.createElement("img", { src: "../images/star.png", className: "card--small-image" }),
-          _react2.default.createElement(
-            "span",
-            { className: "card--rating" },
-            "5.0"
-          ),
-          _react2.default.createElement(
-            "span",
-            { className: "card--number-ratings" },
-            "(6)"
-          ),
-          _react2.default.createElement(
-            "span",
-            { className: "card--country" },
-            "USA"
-          )
-        )
-      ),
-      _react2.default.createElement(
-        "div",
-        { className: "card--middle-line" },
-        "Life lessons with Katie Zaferes"
-      ),
-      _react2.default.createElement(
-        "div",
-        { className: "card--bottom-line" },
-        _react2.default.createElement(
-          "span",
-          { className: "card--price" },
-          "From $136"
+            "div",
+            { className: "card--stats" },
+            _react2.default.createElement("img", { src: "../images/star.png", className: "card--star" }),
+            _react2.default.createElement(
+                "span",
+                null,
+                props.rating
+            ),
+            _react2.default.createElement(
+                "span",
+                { className: "gray" },
+                "(",
+                props.reviewCount,
+                ") \u2022 "
+            ),
+            _react2.default.createElement(
+                "span",
+                { className: "gray" },
+                props.country
+            )
         ),
-        " ",
         _react2.default.createElement(
-          "span",
-          { className: "card--per" },
-          "/ person"
+            "p",
+            null,
+            props.title
+        ),
+        _react2.default.createElement(
+            "p",
+            null,
+            _react2.default.createElement(
+                "span",
+                { className: "bold" },
+                "From $",
+                props.price
+            ),
+            " / person"
         )
-      )
-    )
-  );
+    );
 }
 
 /***/ }),

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -264,9 +264,9 @@ process.umask = function() { return 0; };
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(12);
+  module.exports = __webpack_require__(15);
 } else {
-  module.exports = __webpack_require__(11);
+  module.exports = __webpack_require__(14);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -279,9 +279,9 @@ if (process.env.NODE_ENV === 'production') {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(14);
+  module.exports = __webpack_require__(17);
 } else {
-  module.exports = __webpack_require__(13);
+  module.exports = __webpack_require__(16);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -343,7 +343,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(15);
+__webpack_require__(18);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -399,22 +399,27 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Navbar = __webpack_require__(17);
+var _Navbar = __webpack_require__(9);
 
 var _Navbar2 = _interopRequireDefault(_Navbar);
 
-var _Hero = __webpack_require__(18);
+var _Hero = __webpack_require__(8);
 
 var _Hero2 = _interopRequireDefault(_Hero);
+
+var _Card = __webpack_require__(7);
+
+var _Card2 = _interopRequireDefault(_Card);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
+    // <Hero />
     return _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(_Navbar2.default, null),
-        _react2.default.createElement(_Hero2.default, null)
+        _react2.default.createElement(_Card2.default, null)
     );
 }
 
@@ -425,7 +430,7 @@ function App() {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
-var m = __webpack_require__(10);
+var m = __webpack_require__(13);
 if (process.env.NODE_ENV === 'production') {
   exports.createRoot = m.createRoot;
   exports.hydrateRoot = m.hydrateRoot;
@@ -458,6 +463,142 @@ if (process.env.NODE_ENV === 'production') {
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Card;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Card() {
+  return _react2.default.createElement(
+    "section",
+    null,
+    _react2.default.createElement(
+      "div",
+      { className: "card" },
+      _react2.default.createElement("img", { src: "../images/katie-zaferes.png", className: "card--image" }),
+      _react2.default.createElement(
+        "div",
+        { className: "card--top-line" },
+        _react2.default.createElement(
+          "div",
+          { className: "card--stats" },
+          _react2.default.createElement("img", { src: "../images/star.png", className: "card--small-image" }),
+          _react2.default.createElement(
+            "span",
+            { className: "card--rating" },
+            "5.0"
+          ),
+          _react2.default.createElement(
+            "span",
+            { className: "card--number-ratings" },
+            "(6)"
+          ),
+          _react2.default.createElement(
+            "span",
+            { className: "card--country" },
+            "USA"
+          )
+        )
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: "card--middle-line" },
+        "Life lessons with Katie Zaferes"
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: "card--bottom-line" },
+        _react2.default.createElement(
+          "span",
+          { className: "card--price" },
+          "From $136"
+        ),
+        " ",
+        _react2.default.createElement(
+          "span",
+          { className: "card--per" },
+          "/ person"
+        )
+      )
+    )
+  );
+}
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = Hero;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Hero() {
+    return _react2.default.createElement(
+        "section",
+        { className: "hero" },
+        _react2.default.createElement("img", { src: "../images/photo-grid.png", className: "hero--photo" }),
+        _react2.default.createElement(
+            "h1",
+            { className: "hero--header" },
+            "Online Experiences"
+        ),
+        _react2.default.createElement(
+            "p",
+            { className: "hero--text" },
+            "Join unique interactive activities led by one-of-a-kind hosts\u2014all without leaving home."
+        )
+    );
+}
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = Navbar;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Navbar() {
+    return _react2.default.createElement(
+        "nav",
+        null,
+        _react2.default.createElement("img", { src: "../images/airbnb-logo.png", className: "nav--logo" })
+    );
+}
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -479,7 +620,7 @@ root.render(_react2.default.createElement(_App2.default, null));
 // ReactDOM.createRoot(document.getElementById("root")).render(navbar)
 
 /***/ }),
-/* 8 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30355,7 +30496,7 @@ if (
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 9 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30685,7 +30826,7 @@ exports.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!pl(c))throw Er
 
 
 /***/ }),
-/* 10 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30723,15 +30864,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(9);
+  module.exports = __webpack_require__(12);
 } else {
-  module.exports = __webpack_require__(8);
+  module.exports = __webpack_require__(11);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 11 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33475,10 +33616,10 @@ if (
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(16)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(19)(module)))
 
 /***/ }),
-/* 12 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33511,7 +33652,7 @@ exports.useTransition=function(){return U.current.useTransition()};exports.versi
 
 
 /***/ }),
-/* 13 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34153,7 +34294,7 @@ if (
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(3).setImmediate))
 
 /***/ }),
-/* 14 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34180,7 +34321,7 @@ exports.unstable_shouldYield=M;exports.unstable_wrapCallback=function(a){var b=y
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).setImmediate))
 
 /***/ }),
-/* 15 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -34373,7 +34514,7 @@ exports.unstable_shouldYield=M;exports.unstable_wrapCallback=function(a){var b=y
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(0)))
 
 /***/ }),
-/* 16 */
+/* 19 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -34399,68 +34540,6 @@ module.exports = function(module) {
 	return module;
 };
 
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = Navbar;
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Navbar() {
-    return _react2.default.createElement(
-        "nav",
-        null,
-        _react2.default.createElement("img", { src: "../images/airbnb-logo.png", className: "nav--logo" })
-    );
-}
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = Hero;
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Hero() {
-    return _react2.default.createElement(
-        "section",
-        { className: "hero" },
-        _react2.default.createElement("img", { src: "../images/photo-grid.png", className: "hero--photo" }),
-        _react2.default.createElement(
-            "h1",
-            { className: "hero--header" },
-            "Online Experiences"
-        ),
-        _react2.default.createElement(
-            "p",
-            { className: "hero--text" },
-            "Join unique interactive activities led by one-of-a-kind hosts\u2014all without leaving home."
-        )
-    );
-}
 
 /***/ })
 /******/ ]);

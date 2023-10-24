@@ -39,3 +39,86 @@ section {
 .hero--text {
     margin-top: 0;
 }
+
+.card {
+    width: 175px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card--top-line {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.card--small-image {
+    width: 14px;
+}
+
+.card--image {
+    width: 100%;
+    border-radius: 9px;
+}
+
+.card--rating {
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 110%;
+    
+}
+
+.card--number-ratings {
+    color: #918E9B;
+    font-size: 12px;
+    line-height: 110%;
+    padding-right: 2px;
+}
+
+.card--country {
+    color: #918E9B;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 110%;
+}
+
+.card--middle-line {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 110%;
+}
+
+.card--bottom-line {
+    padding-top: 8px;
+    font-size: 12px;
+    line-height: 110%;
+    font-weight: 300;
+}
+
+.card--price {
+    font-weight: 600;
+}
+
+.card--image-container {
+    position: relative;
+    
+}
+
+.card--stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card--status {
+    width: 60px;
+    height: 20px;
+    padding: 2px;
+    background: #FFF;
+    border-radius: 2px;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+}

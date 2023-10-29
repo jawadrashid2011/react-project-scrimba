@@ -417,23 +417,11 @@ var _data2 = _interopRequireDefault(_data);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/*
-Challenge:
-
-- import the array of data from data.js
-- map over the array to create <Card /> components
-- display the array of card components under the navbar
-  (in place of the current <Card /> component)
-
-Note: We haven't styled the group of components yet, so they'll
-still be block elements, stacked vertically. We'll add styling later.
-*/
-
 function App() {
-    // <Hero />
     console.log(_data2.default);
     var cards = _data2.default.map(function (card) {
         return _react2.default.createElement(_Card2.default, {
+            key: card.id,
             img: card.coverImg,
             rating: card.stats.rating,
             reviewCount: card.stats.reviewCount,
@@ -442,6 +430,8 @@ function App() {
             price: card.price
         });
     });
+
+    // <Hero />
     return _react2.default.createElement(
         "div",
         null,

@@ -413,6 +413,18 @@ var _Card2 = _interopRequireDefault(_Card);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/*
+Challenge:
+
+- import the array of data from data.js
+- map over the array to create <Card /> components
+- display the array of card components under the navbar
+  (in place of the current <Card /> component)
+
+Note: We haven't styled the group of components yet, so they'll
+still be block elements, stacked vertically. We'll add styling later.
+*/
+
 function App() {
     // <Hero />
     return _react2.default.createElement(
@@ -423,7 +435,7 @@ function App() {
             img: "katie-zaferes.png",
             rating: "5.0",
             reviewCount: 6,
-            country: "USA",
+            location: "USA",
             title: "Life Lessons with Katie Zaferes",
             price: 136
         })
@@ -485,11 +497,11 @@ function Card(props) {
     return _react2.default.createElement(
         "div",
         { className: "card" },
-        _react2.default.createElement("img", { src: "../images/" + props.img, className: "card--image" }),
+        _react2.default.createElement("img", { src: "../public/images/" + props.img, className: "card--image" }),
         _react2.default.createElement(
             "div",
             { className: "card--stats" },
-            _react2.default.createElement("img", { src: "../images/star.png", className: "card--star" }),
+            _react2.default.createElement("img", { src: "../public/images/star.png", className: "card--star" }),
             _react2.default.createElement(
                 "span",
                 null,
@@ -549,7 +561,7 @@ function Hero() {
     return _react2.default.createElement(
         "section",
         { className: "hero" },
-        _react2.default.createElement("img", { src: "../images/photo-grid.png", className: "hero--photo" }),
+        _react2.default.createElement("img", { src: "../public/images/photo-grid.png", className: "hero--photo" }),
         _react2.default.createElement(
             "h1",
             { className: "hero--header" },
@@ -585,7 +597,7 @@ function Navbar() {
     return _react2.default.createElement(
         "nav",
         null,
-        _react2.default.createElement("img", { src: "../images/airbnb-logo.png", className: "nav--logo" })
+        _react2.default.createElement("img", { src: "../public/images/airbnb-logo.png", className: "nav--logo" })
     );
 }
 

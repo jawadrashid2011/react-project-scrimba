@@ -427,7 +427,8 @@ function App() {
             reviewCount: card.stats.reviewCount,
             location: card.location,
             title: card.title,
-            price: card.price
+            price: card.price,
+            openSpots: card.openSpots
         });
     });
 
@@ -496,9 +497,21 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Card(props) {
+    var badgeText = void 0;
+    if (props.openSpots === 0) {
+        badgeText = "SOLD OUT";
+    } else if (props.location === "Online") {
+        badgeText = "ONLINE";
+    }
+
     return _react2.default.createElement(
         "div",
         { className: "card" },
+        badgeText && _react2.default.createElement(
+            "div",
+            { className: "card--badge" },
+            badgeText
+        ),
         _react2.default.createElement("img", { src: "../public/images/" + props.img, className: "card--image" }),
         _react2.default.createElement(
             "div",

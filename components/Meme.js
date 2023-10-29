@@ -2,19 +2,12 @@ import React from "react"
 import memesData from "../memesData.js"
 
 export default function Meme() {
-    /**
-     * Challenge: Get a random image from the `memesData` array
-     * when the "new meme image" button is clicked.
-     * 
-     * Log the URL of the image to the console. (Don't worry
-     * about displaying the image yet)
-     */
+    const [memeImage, setMemeImage] = React.useState("")
 
     function getMemeImage () {
-        const memesArr = memesData.data.memes;
-        const randomMeme = memesArr[Math.floor(Math.random() * memesArr.length)];
-        const url = randomMeme.url;
-        console.log(url);
+        const memesArray = memesData.data.memes
+        const randomNumber = Math.floor(Math.random() * memesArray.length)
+        setMemeImage(memesArray[randomNumber].url)
     }
     
     return (
@@ -37,6 +30,7 @@ export default function Meme() {
                     Get a new meme image 🖼
                 </button>
             </div>
+            <img src={memeImage} className="meme--image"/>
         </main>
     )
 }

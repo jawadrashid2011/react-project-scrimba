@@ -393,6 +393,9 @@ module.exports = g;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 exports.default = App;
 
 var _react = __webpack_require__(1);
@@ -419,24 +422,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function App() {
     console.log(_data2.default);
-    var cards = _data2.default.map(function (card) {
-        return _react2.default.createElement(_Card2.default, {
-            key: card.id,
-            img: card.coverImg,
-            rating: card.stats.rating,
-            reviewCount: card.stats.reviewCount,
-            location: card.location,
-            title: card.title,
-            price: card.price,
-            openSpots: card.openSpots
-        });
+    var cards = _data2.default.map(function (item) {
+        return _react2.default.createElement(_Card2.default, _extends({
+            key: item.id
+        }, item));
     });
 
-    // <Hero />
     return _react2.default.createElement(
         "div",
         null,
         _react2.default.createElement(_Navbar2.default, null),
+        _react2.default.createElement(_Hero2.default, null),
         _react2.default.createElement(
             "section",
             { className: "cards-list" },
@@ -512,7 +508,10 @@ function Card(props) {
             { className: "card--badge" },
             badgeText
         ),
-        _react2.default.createElement("img", { src: "../public/images/" + props.img, className: "card--image" }),
+        _react2.default.createElement("img", {
+            src: "../public/images/" + props.coverImg,
+            className: "card--image"
+        }),
         _react2.default.createElement(
             "div",
             { className: "card--stats" },
@@ -520,13 +519,13 @@ function Card(props) {
             _react2.default.createElement(
                 "span",
                 null,
-                props.rating
+                props.stats.rating
             ),
             _react2.default.createElement(
                 "span",
                 { className: "gray" },
                 "(",
-                props.reviewCount,
+                props.stats.reviewCount,
                 ") \u2022 "
             ),
             _react2.default.createElement(
@@ -537,12 +536,12 @@ function Card(props) {
         ),
         _react2.default.createElement(
             "p",
-            null,
+            { className: "card--title" },
             props.title
         ),
         _react2.default.createElement(
             "p",
-            null,
+            { className: "card--price" },
             _react2.default.createElement(
                 "span",
                 { className: "bold" },

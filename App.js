@@ -6,23 +6,17 @@ import cardsData from "./data"
 
 export default function App() {
     console.log(cardsData);
-    const cards = cardsData.map(card => {
+    const cards = cardsData.map(item => {
         return <Card 
-                    key={card.id}
-                    img={card.coverImg}
-                    rating={card.stats.rating}
-                    reviewCount={card.stats.reviewCount}
-                    location={card.location}
-                    title={card.title}
-                    price={card.price} 
-                    openSpots={card.openSpots}
+                    key={item.id}
+                    {...item}
                     />;
     })
 
-    // <Hero />
     return (
         <div>
             <Navbar />
+            <Hero />
             <section className="cards-list">
                 {cards}
             </section>

@@ -33,3 +33,33 @@ header {
     font-size: 0.75rem;
     font-weight: 500;
 }
+
+.meme--form {
+    padding: 36px;
+}
+
+.meme--input-1, .meme--input-2 {
+    border-radius: 5px;
+    width: 48%;
+    border: 1px solid #D5D4D8;
+    height: 35px;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.meme--input-2 {
+    margin-left: 17px;
+}
+
+.meme--button {
+    margin-top: 15px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -1.6px;
+}

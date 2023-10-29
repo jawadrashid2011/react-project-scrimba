@@ -403,13 +403,25 @@ var _Header = __webpack_require__(21);
 
 var _Header2 = _interopRequireDefault(_Header);
 
+var _Meme = __webpack_require__(22);
+
+var _Meme2 = _interopRequireDefault(_Meme);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/**
+ * Challenge: 
+ * - Create a Meme component.
+ * - Inside the Meme component, render a styled form
+ *   with our 2 inputs and the button.
+ * - Don't worry about adding any functionality yet
+ */
 function App() {
     return _react2.default.createElement(
         "div",
         null,
-        _react2.default.createElement(_Header2.default, null)
+        _react2.default.createElement(_Header2.default, null),
+        _react2.default.createElement(_Meme2.default, null)
     );
 }
 
@@ -34417,7 +34429,7 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Header(props) {
+function Header() {
     return _react2.default.createElement(
         'header',
         null,
@@ -34434,6 +34446,50 @@ function Header(props) {
             'h4',
             { className: 'header--project' },
             'React Course - Project 3'
+        )
+    );
+}
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = Meme;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Meme() {
+    return _react2.default.createElement(
+        "form",
+        { className: "meme--form" },
+        _react2.default.createElement("input", {
+            type: "text",
+            className: "meme--input-1",
+            value: "Shut up"
+        }),
+        _react2.default.createElement("input", {
+            type: "text",
+            className: "meme--input-2",
+            value: "and take my money"
+        }),
+        _react2.default.createElement("br", null),
+        _react2.default.createElement(
+            "button",
+            {
+                type: "button",
+                className: "meme--button"
+            },
+            "Get a new meme image \uD83D\uDDBC"
         )
     );
 }

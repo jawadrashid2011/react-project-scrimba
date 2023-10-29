@@ -399,13 +399,17 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Header = __webpack_require__(21);
+
+var _Header2 = _interopRequireDefault(_Header);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
     return _react2.default.createElement(
         "div",
         null,
-        "REPLACE THIS"
+        _react2.default.createElement(_Header2.default, null)
     );
 }
 
@@ -34393,6 +34397,46 @@ module.exports = function(module) {
 	return module;
 };
 
+
+/***/ }),
+/* 20 */,
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = Header;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Header(props) {
+    return _react2.default.createElement(
+        'header',
+        null,
+        _react2.default.createElement('img', {
+            src: '../public/images/troll-face.png',
+            className: 'header--image'
+        }),
+        _react2.default.createElement(
+            'h2',
+            { className: 'header--title' },
+            'Meme Generator'
+        ),
+        _react2.default.createElement(
+            'h4',
+            { className: 'header--project' },
+            'React Course - Project 3'
+        )
+    );
+}
 
 /***/ })
 /******/ ]);

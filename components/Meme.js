@@ -2,24 +2,24 @@ import React from "react"
 
 export default function Meme() {
     return (
-        <form className="meme--form">
-            <input 
-                type="text" 
-                className="meme--input-1"
-                value="Shut up"
-            />
-            <input 
-                type="text"
-                className="meme--input-2"
-                value="and take my money"
-            />
-            <br />
-            <button 
-                type="button"
-                className="meme--button"
-            >
-                Get a new meme image 🖼
-            </button>
-        </form>
+        <main>
+            <form className="form">
+                <input 
+                    type="text"
+                    placeholder="Top text"
+                    className="form--input"
+                />
+                <input 
+                    type="text"
+                    placeholder="Bottom text"
+                    className="form--input"
+                />
+                <button 
+                    className="form--button"
+                >
+                    Get a new meme image 🖼
+                </button>
+            </form>
+        </main>
     )
 }

@@ -34431,21 +34431,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function Header() {
     return _react2.default.createElement(
-        'header',
-        null,
-        _react2.default.createElement('img', {
-            src: '../public/images/troll-face.png',
-            className: 'header--image'
+        "header",
+        { className: "header" },
+        _react2.default.createElement("img", {
+            src: "./public/images/troll-face.png",
+            className: "header--image"
         }),
         _react2.default.createElement(
-            'h2',
-            { className: 'header--title' },
-            'Meme Generator'
+            "h2",
+            { className: "header--title" },
+            "Meme Generator"
         ),
         _react2.default.createElement(
-            'h4',
-            { className: 'header--project' },
-            'React Course - Project 3'
+            "h4",
+            { className: "header--project" },
+            "React Course - Project 3"
         )
     );
 }
@@ -34470,26 +34470,28 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function Meme() {
     return _react2.default.createElement(
-        "form",
-        { className: "meme--form" },
-        _react2.default.createElement("input", {
-            type: "text",
-            className: "meme--input-1",
-            value: "Shut up"
-        }),
-        _react2.default.createElement("input", {
-            type: "text",
-            className: "meme--input-2",
-            value: "and take my money"
-        }),
-        _react2.default.createElement("br", null),
+        "main",
+        null,
         _react2.default.createElement(
-            "button",
-            {
-                type: "button",
-                className: "meme--button"
-            },
-            "Get a new meme image \uD83D\uDDBC"
+            "form",
+            { className: "form" },
+            _react2.default.createElement("input", {
+                type: "text",
+                placeholder: "Top text",
+                className: "form--input"
+            }),
+            _react2.default.createElement("input", {
+                type: "text",
+                placeholder: "Bottom text",
+                className: "form--input"
+            }),
+            _react2.default.createElement(
+                "button",
+                {
+                    className: "form--button"
+                },
+                "Get a new meme image \uD83D\uDDBC"
+            )
         )
     );
 }

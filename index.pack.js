@@ -486,14 +486,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function Meme() {
-  /**
-   * Challenge: 
-   * 1. Set up the text inputs to save to
-   *    the `topText` and `bottomText` state variables.
-   * 2. Replace the hard-coded text on the image with
-   *    the text being saved to state.
-   */
-
   var _React$useState = __WEBPACK_IMPORTED_MODULE_0_react___default.a.useState({
       topText: "",
       bottomText: "",
@@ -506,6 +498,7 @@ function Meme() {
     _React$useState4 = _slicedToArray(_React$useState3, 2),
     allMemeImages = _React$useState4[0],
     setAllMemeImages = _React$useState4[1];
+  console.log(meme);
   function getMemeImage() {
     var memesArray = allMemeImages.data.memes;
     var randomNumber = Math.floor(Math.random() * memesArray.length);
@@ -516,16 +509,30 @@ function Meme() {
       });
     });
   }
+  function handleChange(event) {
+    var _event$target = event.target,
+      name = _event$target.name,
+      value = _event$target.value;
+    setMeme(function (prevMeme) {
+      return _objectSpread(_objectSpread({}, prevMeme), {}, _defineProperty({}, name, value));
+    });
+  }
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("main", null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "form"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
     type: "text",
     placeholder: "Top text",
-    className: "form--input"
+    className: "form--input",
+    name: "topText",
+    value: meme.topText,
+    onChange: handleChange
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
     type: "text",
     placeholder: "Bottom text",
-    className: "form--input"
+    className: "form--input",
+    name: "bottomText",
+    value: meme.bottomText,
+    onChange: handleChange
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
     className: "form--button",
     onClick: getMemeImage
@@ -536,9 +543,9 @@ function Meme() {
     className: "meme--image"
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
     className: "meme--text top"
-  }, "One does not simply"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
+  }, meme.topText), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
     className: "meme--text bottom"
-  }, "Walk into Mordor")));
+  }, meme.bottomText)));
 }
 
 /***/ }),

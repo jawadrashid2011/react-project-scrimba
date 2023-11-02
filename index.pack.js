@@ -392,7 +392,9 @@ module.exports = g;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Header__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Header___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_Header__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Meme__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Meme___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_Meme__);
 
 
 
@@ -404,7 +406,7 @@ module.exports = g;
  * - Don't worry about adding any functionality yet
  */
 function App() {
-  return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_Header__["a" /* default */], null), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Meme__["a" /* default */], null));
+  return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", null);
 }
 
 /***/ }),
@@ -442,131 +444,15 @@ if (process.env.NODE_ENV === 'production') {
 
 /***/ }),
 /* 7 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = Header;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-
-function Header() {
-  return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("header", {
-    className: "header"
-  }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    src: "./public/images/troll-face.png",
-    className: "header--image"
-  }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
-    className: "header--title"
-  }, "Meme Generator"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h4", {
-    className: "header--project"
-  }, "React Course - Project 3"));
-}
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'D:\\Projects\\react-project-scrimba\\components\\Header.js'");
 
 /***/ }),
 /* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = Meme;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
-function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
-function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function Meme() {
-  /**
-   * Challenge: 
-   * As soon as the Meme component loads the first time,
-   * make an API call to "https://api.imgflip.com/get_memes".
-   * 
-   * When the data comes in, save just the memes array part
-   * of that data to the `allMemes` state
-   * 
-   * Think about if there are any dependencies that, if they
-   * changed, you'd want to cause to re-run this function.
-   * 
-   * Hint: for now, don't try to use an async/await function.
-   * Instead, use `.then()` blocks to resolve the promises
-   * from using `fetch`. We'll learn why after this challenge.
-   */
-
-  var _React$useState = __WEBPACK_IMPORTED_MODULE_0_react___default.a.useState({
-      topText: "",
-      bottomText: "",
-      randomImage: "http://i.imgflip.com/1bij.jpg"
-    }),
-    _React$useState2 = _slicedToArray(_React$useState, 2),
-    meme = _React$useState2[0],
-    setMeme = _React$useState2[1];
-  var _React$useState3 = __WEBPACK_IMPORTED_MODULE_0_react___default.a.useState([]),
-    _React$useState4 = _slicedToArray(_React$useState3, 2),
-    allMemes = _React$useState4[0],
-    setAllMemes = _React$useState4[1];
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.useEffect(function () {
-    console.log("Use Effect Called");
-    fetch("https://api.imgflip.com/get_memes").then(function (response) {
-      return response.json();
-    }).then(function (jsonObj) {
-      return setAllMemes(jsonObj.data.memes);
-    });
-  }, []);
-  function getMemeImage() {
-    var randomNumber = Math.floor(Math.random() * allMemes.length);
-    var url = allMemes[randomNumber].url;
-    setMeme(function (prevMeme) {
-      return _objectSpread(_objectSpread({}, prevMeme), {}, {
-        randomImage: url
-      });
-    });
-  }
-  function handleChange(event) {
-    var _event$target = event.target,
-      name = _event$target.name,
-      value = _event$target.value;
-    setMeme(function (prevMeme) {
-      return _objectSpread(_objectSpread({}, prevMeme), {}, _defineProperty({}, name, value));
-    });
-  }
-  return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("main", null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-    className: "form"
-  }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
-    type: "text",
-    placeholder: "Top text",
-    className: "form--input",
-    name: "topText",
-    value: meme.topText,
-    onChange: handleChange
-  }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
-    type: "text",
-    placeholder: "Bottom text",
-    className: "form--input",
-    name: "bottomText",
-    value: meme.bottomText,
-    onChange: handleChange
-  }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
-    className: "form--button",
-    onClick: getMemeImage
-  }, "Get a new meme image \uD83D\uDDBC")), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-    className: "meme"
-  }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    src: meme.randomImage,
-    className: "meme--image"
-  }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
-    className: "meme--text top"
-  }, meme.topText), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
-    className: "meme--text bottom"
-  }, meme.bottomText)));
-}
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'D:\\Projects\\react-project-scrimba\\components\\Meme.js'");
 
 /***/ }),
 /* 9 */

@@ -486,6 +486,14 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function Meme() {
+  /**
+   * Challenge: 
+   * 1. Set up the text inputs to save to
+   *    the `topText` and `bottomText` state variables.
+   * 2. Replace the hard-coded text on the image with
+   *    the text being saved to state.
+   */
+
   var _React$useState = __WEBPACK_IMPORTED_MODULE_0_react___default.a.useState({
       topText: "",
       bottomText: "",
@@ -521,10 +529,16 @@ function Meme() {
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
     className: "form--button",
     onClick: getMemeImage
-  }, "Get a new meme image \uD83D\uDDBC")), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+  }, "Get a new meme image \uD83D\uDDBC")), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "meme"
+  }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: meme.randomImage,
     className: "meme--image"
-  }));
+  }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
+    className: "meme--text top"
+  }, "One does not simply"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
+    className: "meme--text bottom"
+  }, "Walk into Mordor")));
 }
 
 /***/ }),

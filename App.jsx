@@ -16,13 +16,18 @@ export default function App() {
 
   /**
    * Challenge:
-   * 1. Add createdAt and updatedAt properties to the notes
+   * 1. ✅ Add createdAt and updatedAt properties to the notes
    *    When a note is first created, set the `createdAt` and `updatedAt`
    *    properties to `Date.now()`. Whenever a note is modified, set the
    *    `updatedAt` property to `Date.now()`.
    *
-   * 2. TBA
+   * 2. ✅ Create a new `sortedNotes` array (doesn't need to be saved
+   *    in state) that orders the items in the array from
+   *    most-recently-updated to least-recently-updated.
+   *    This may require a quick Google search.
    */
+
+  const sortedNotes = notes.sort((a, b) => b.updatedAt - a.updatedAt)
 
   React.useEffect(() => {
     const unsubscribe = onSnapshot(notesCollection, (snapshot) => {
@@ -72,7 +77,7 @@ export default function App() {
       {notes.length > 0 ? (
         <Split sizes={[30, 70]} direction="horizontal" className="split">
           <Sidebar
-            notes={notes}
+            notes={sortedNotes}
             currentNote={currentNote}
             setCurrentNoteId={setCurrentNoteId}
             newNote={createNewNote}

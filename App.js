@@ -6,10 +6,6 @@ import Split from "react-split";
 import { nanoid } from "nanoid";
 
 export default function App() {
-    /**
-     * Challenge: When the user edits a note, reposition
-     * it in the list of notes to the top of the list
-     */
   const [notes, setNotes] = React.useState(
     () => JSON.parse(localStorage.getItem("notes")) || []
   );
@@ -18,13 +14,8 @@ export default function App() {
   );
 
   React.useEffect(() => {
-    saveToLocalStorage();
-  }, [notes]);
-
-  function saveToLocalStorage() {
     localStorage.setItem("notes", JSON.stringify(notes));
-    console.log(notes);
-  }
+  }, [notes]);
 
   function createNewNote() {
     const newNote = {
@@ -36,15 +27,37 @@ export default function App() {
   }
 
   function updateNote(text) {
-    const oldNote = notes.find((note) => note.id === currentNoteId);
-
+    // Put the most recently-modified note at the top
     setNotes((oldNotes) => {
-      return [
-        { ...oldNote, body: text },
-        ...oldNotes.filter((note) => note.id !== currentNoteId)
-      ];
+      const newArray = [];
+      for (let i = 0; i < oldNotes.length; i++) {
+        const oldNote = oldNotes[i];
+        if (oldNote.id === currentNoteId) {
+          newArray.unshift({ ...oldNote, body: text });
+        } else {
+          newArray.push(oldNote);
+        }
+      }
+      return newArray;
     });
+  }
 
+  /**
+   * Challenge: complete and implement the deleteNote function
+   *
+   * Hints:
+   * 1. What array method can be used to return a new
+   *    array that has filtered out an item based
+   *    on a condition?
+   * 2. Notice the parameters being based to the function
+   *    and think about how both of those parameters
+   *    can be passed in during the onClick event handler
+   */
+
+  function deleteNote(event, noteId) {
+    event.stopPropagation();
+    // Your code here
+    setNotes((oldNotes) => oldNotes.filter((note) => note.id !== noteId));
   }
 
   function findCurrentNote() {
@@ -64,6 +77,7 @@ export default function App() {
             currentNote={findCurrentNote()}
             setCurrentNoteId={setCurrentNoteId}
             newNote={createNewNote}
+            deleteNote={deleteNote}
           />
           {currentNoteId && notes.length > 0 && (
             <Editor currentNote={findCurrentNote()} updateNote={updateNote} />

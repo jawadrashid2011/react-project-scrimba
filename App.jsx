@@ -10,7 +10,7 @@ export default function App() {
     )
     const [currentNoteId, setCurrentNoteId] = React.useState(
         (notes[0]?.id) || ""
-    )   
+    )    
     
     const currentNote = 
         notes.find(note => note.id === currentNoteId) 

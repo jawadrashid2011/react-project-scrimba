@@ -1,9 +1,9 @@
+var path = require('path')
+
 module.exports = {
   "output": {
-    "filename": "[name].pack.js"
-  },
-  "entry": {
-    "index": "./index"
+    "filename": "[name].pack.js",
+    path: path.resolve(__dirname, "./")
   },
   "module": {
     "rules": [
@@ -22,7 +22,15 @@ module.exports = {
         },
         "exclude": /node_modules/,
         "test": /\.js$/
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       }
     ]
-  }
+  },
+  "entry": {
+    "index": "./index"
+  },
+  mode: 'development'
 };

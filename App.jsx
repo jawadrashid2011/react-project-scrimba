@@ -4,6 +4,20 @@ import { nanoid } from "nanoid";
 
 export default function App() {
   const [dice, setDice] = React.useState(allNewDice());
+  const [tenzies, setTenzies] = React.useState(false)
+  
+  React.useEffect(() => {
+    const diceValueToCompare = dice[0].value
+    // console.log(diceValueToCompare)
+    let dieStatus = dice.map(die => die.isHeld == true && die.value == diceValueToCompare)
+
+    // console.log(dieStatus)
+    const isWon = dieStatus.every(die => die == true)
+    if(isWon) {
+        setTenzies(true)
+        console.log("You won!")
+    }
+  }, [dice])
 
   function generateNewDie() {
     return {
@@ -45,6 +59,7 @@ export default function App() {
       hold={() => holdDice(die.id)}
     />
   ));
+
 
   return (
     <main>

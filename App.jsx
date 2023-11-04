@@ -22,11 +22,11 @@ export default function App() {
   }
 
   function holdDice(id) {
-    setDice((prevDice) => {
-      return prevDice.map((die) =>
-        die.id == id ? { ...die, isHeld: !die.isHeld } : die
-      );
-    });
+    setDice((prevDice) =>
+      prevDice.map((die) => {
+        return die.id == id ? { ...die, isHeld: !die.isHeld } : die;
+      })
+    );
   }
 
   const diceElements = dice.map((die) => (

@@ -2,7 +2,7 @@ import React from "react";
 import Die from "./Die";
 
 export default function App() {
-  function allowNewDice() {
+  function allNewDice() {
     let numbers = [...Array(10).keys()]
     let max = 6
     let min = 1
@@ -10,7 +10,7 @@ export default function App() {
     console.log(newNumbers);
   }
 
-  allowNewDice()
+  allNewDice()
 
   return (
     <main>

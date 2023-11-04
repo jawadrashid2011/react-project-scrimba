@@ -6,6 +6,7 @@ body {
     margin: 0;
     background-color: #0B2434;
     padding: 30px 20px;
+    font-family: 'Karla', sans-serif;
 }
 
 main {
@@ -16,7 +17,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: 20px;
 }
 
@@ -43,12 +44,21 @@ main {
 }
 
 .dice-roll-btn {
-    margin-top: 25px;
-    width: 92px;
-    height: 36px;
+    width: 100px;
+    height: 50px;
     background: #5035FF;
     color: white;
     border-radius: 5px;
     border: 0px;
     cursor: pointer;
+    font-size: 1.2rem;
+    font-family: 'Karla', sans-serif;
+}
+
+.dice-roll-btn:focus {
+    outline: none;
+}
+
+.dice-roll-btn:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }

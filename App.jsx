@@ -8,10 +8,8 @@ export default function App() {
   
   React.useEffect(() => {
     const diceValueToCompare = dice[0].value
-    // console.log(diceValueToCompare)
     let dieStatus = dice.map(die => die.isHeld == true && die.value == diceValueToCompare)
 
-    // console.log(dieStatus)
     const isWon = dieStatus.every(die => die == true)
     if(isWon) {
         setTenzies(true)

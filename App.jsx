@@ -18,7 +18,16 @@ export default function App() {
   }
 
   function roll() {
-    setDice(allNewDice());
+    const allNewDices = allNewDice()
+
+    setDice((oldDice) =>
+      oldDice.map((die, index) => {
+        return die.isHeld ? die : {
+            ...die,
+            value: allNewDices[index].value
+        }
+      })
+    );
   }
 
   function holdDice(id) {

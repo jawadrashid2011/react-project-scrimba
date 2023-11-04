@@ -41,3 +41,14 @@ main {
 .die-num {
     font-size: 2rem;
 }
+
+.dice-roll-btn {
+    margin-top: 25px;
+    width: 92px;
+    height: 36px;
+    background: #5035FF;
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+}

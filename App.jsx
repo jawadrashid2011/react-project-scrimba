@@ -13,6 +13,10 @@ export default function App() {
     );
   }
 
+  function roll() {
+    setDice(allNewDice())
+  }
+
   const diceElements = dice.map(die => <Die value={die} />) 
 
   return (
@@ -20,6 +24,9 @@ export default function App() {
       <div className="dice-container">
         {diceElements}
       </div>
+      <button className="dice-roll-btn" onClick={roll}>
+        Roll
+      </button>
     </main>
   );
 }

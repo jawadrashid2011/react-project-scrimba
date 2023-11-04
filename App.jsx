@@ -5,25 +5,25 @@ export default function App() {
   const [dice, setDice] = React.useState(allNewDice());
 
   function allNewDice() {
-    let numbers = [...Array(10).keys()];
-    let max = 6;
-    let min = 1;
-    return numbers.map(() =>
-      Math.floor(Math.random() * (max - min + 1) + min)
-    );
+    let numbers = [];
+    for (let i = 0; i < 10; i++) {
+      numbers.push({
+        value: Math.ceil(Math.random() * 6),
+        isHeld: false,
+      });
+    }
+    return numbers;
   }
 
   function roll() {
-    setDice(allNewDice())
+    setDice(allNewDice());
   }
 
-  const diceElements = dice.map(die => <Die value={die} />) 
+  const diceElements = dice.map((die) => <Die value={die.value} />);
 
   return (
     <main>
-      <div className="dice-container">
-        {diceElements}
-      </div>
+      <div className="dice-container">{diceElements}</div>
       <button className="dice-roll-btn" onClick={roll}>
         Roll
       </button>

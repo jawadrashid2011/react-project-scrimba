@@ -9,7 +9,7 @@ export default function App() {
     for (let i = 0; i < 10; i++) {
       numbers.push({
         value: Math.ceil(Math.random() * 6),
-        isHeld: false,
+        isHeld: false
       });
     }
     return numbers;

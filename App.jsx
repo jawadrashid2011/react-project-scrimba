@@ -16,7 +16,6 @@ export default function App() {
     const isWon = dieStatus.every((die) => die == true);
     if (isWon) {
       setTenzies(true);
-      console.log("You won!");
     }
   }, [dice]);
 

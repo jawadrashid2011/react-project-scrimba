@@ -2,7 +2,7 @@ import React from "react";
 import Die from "./Die";
 
 export default function App() {
-  const [diceArr, setDiceArr] = React.useState(allNewDice());
+  const [dice, setDice] = React.useState(allNewDice());
 
   function allNewDice() {
     let numbers = [...Array(10).keys()];
@@ -13,7 +13,7 @@ export default function App() {
     );
   }
 
-  const diceElements = diceArr.map(dice => <Die value={dice} />) 
+  const diceElements = dice.map(die => <Die value={die} />) 
 
   return (
     <main>
